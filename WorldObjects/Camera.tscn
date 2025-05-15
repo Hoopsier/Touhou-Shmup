@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7lrdbwju3t6p"]
+
+[ext_resource type="Script" uid="uid://niq84jfx2gy0" path="res://Scripts/Gamer/CameraFollow.cs" id="1_oqkka"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+floor_constant_speed = true
+floor_block_on_wall = false
+platform_on_leave = 2
+script = ExtResource("1_oqkka")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+ignore_rotation = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." groups=["CameraCollision"]]
+position = Vector2(256, -8)
+polygon = PackedVector2Array(-580, -291, -580, 332, 68, 332, 68, -316, -580, -316, -580, -368, 112, -368, 112, 376, -624, 376, -624, -368, -580, -368)

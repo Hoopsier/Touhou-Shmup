@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://dx1b2m8g8jwh"]
+
+[ext_resource type="PackedScene" uid="uid://bqaxk56tqi74w" path="res://WorldObjects/ParallaxBGH.tscn" id="1_8c4hh"]
+[ext_resource type="PackedScene" uid="uid://d1mr2364pb5o4" path="res://WorldObjects/PlayerSpawn.tscn" id="2_64otc"]
+[ext_resource type="PackedScene" uid="uid://3f7yxi4qaa8f" path="res://WorldObjects/BulletUpgradeItemTEMP.tscn" id="3_pwiek"]
+[ext_resource type="Resource" uid="uid://nb0acti2s0rh" path="res://Resources/BulletDamageUp.tres" id="4_m4okl"]
+[ext_resource type="PackedScene" uid="uid://vjx6m70wjbx5" path="res://WorldObjects/EnemyBase.tscn" id="5_seotd"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_seotd"]
+_data = PackedByteArray(0, 0, 3, 0, 5, 0, 0, 0, 1, 0, 0, 0, 32, 0, 0, 0, 32, 0, 0, 0, 36, 0, 0, 0, 82, 73, 70, 70, 28, 0, 0, 0, 87, 69, 66, 80, 86, 80, 56, 76, 15, 0, 0, 0, 47, 31, 192, 7, 16, 7, 16, 253, 143, 54, 5, 34, 162, 255, 1, 0)
+size_override = Vector2(32, 32)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Marker2D" parent="." instance=ExtResource("2_64otc")]
+position = Vector2(360, 664)
+
+[node name="Area2D" parent="." instance=ExtResource("3_pwiek")]
+position = Vector2(784, 728)
+
+[node name="Area2D2" parent="." instance=ExtResource("3_pwiek")]
+position = Vector2(512, 472)
+bulletUpgrade = ExtResource("4_m4okl")
+
+[node name="Background" parent="." instance=ExtResource("1_8c4hh")]
+
+[node name="EnemyBaseScene" parent="." instance=ExtResource("5_seotd")]
+position = Vector2(832, 576)
+
+[node name="Visible area" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(918.248, 648)
+scale = Vector2(41.1095, 40.5)
+texture = SubResource("PortableCompressedTexture2D_seotd")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Sprites/VisualZone.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f506ef8a4920f9fa9e3ba778b4a36aeb"

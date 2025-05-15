@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://3f7yxi4qaa8f"]
+
+[ext_resource type="Texture2D" uid="uid://ckh2b6mvbe3jv" path="res://Sprites/HasteUpSprite.png" id="1_6yyo8"]
+[ext_resource type="Script" uid="uid://buxc4vaxb1hvn" path="res://Scripts/BulletUpgrades/UpgradeAddScript.cs" id="1_tb7c4"]
+[ext_resource type="Script" uid="uid://gmlvwtv1ngoe" path="res://Scripts/BulletUpgrades/BulletSpeedUp.cs" id="2_ttn24"]
+
+[sub_resource type="Resource" id="Resource_te1xj"]
+script = ExtResource("2_ttn24")
+texture = ExtResource("1_6yyo8")
+name = "Bullet Speed Up"
+strength = 1.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cgeat"]
+
+[node name="Area2D" type="Area2D" node_paths=PackedStringArray("sprite")]
+input_pickable = false
+monitorable = false
+script = ExtResource("1_tb7c4")
+bulletUpgrade = SubResource("Resource_te1xj")
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6yyo8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.71185, 1.72881)
+shape = SubResource("CircleShape2D_cgeat")
+
+[connection signal="body_entered" from="." to="." method="AddUpgrade"]

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bcd4eo36yvhgf"
+path="res://.godot/imported/Stronk.aseprite-5fa4ab96f3be0e95066fc3adb863cc83.res"
+
+[deps]
+
+source_file="res://Sprites/Stronk.aseprite"
+dest_files=["res://.godot/imported/Stronk.aseprite-5fa4ab96f3be0e95066fc3adb863cc83.res"]
+
+[params]
+

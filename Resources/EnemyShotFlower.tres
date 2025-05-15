@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EnemyShotFlower" load_steps=3 format=3 uid="uid://0vknvc1y1xfe"]
+
+[ext_resource type="Texture2D" uid="uid://gjko4fsjork3" path="res://Sprites/Bullet2Sprite.png" id="1_12uqk"]
+[ext_resource type="Script" uid="uid://b80nmmjrufe7q" path="res://Scripts/Enemies/EnemyShotFlower.cs" id="2_rbcin"]
+
+[resource]
+resource_name = "FlowerExposion"
+script = ExtResource("2_rbcin")
+bulletTexture = ExtResource("1_12uqk")
+divider = 15

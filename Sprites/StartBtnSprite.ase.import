@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bavtlgsnmmt8u"
+path="res://.godot/imported/StartBtnSprite.ase-80566acb44d7da996f827d0525b06938.res"
+
+[deps]
+
+source_file="res://Sprites/StartBtnSprite.ase"
+dest_files=["res://.godot/imported/StartBtnSprite.ase-80566acb44d7da996f827d0525b06938.res"]
+
+[params]
+

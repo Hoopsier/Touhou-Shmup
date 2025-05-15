@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqm8hdc1u8pwd"]
+
+[ext_resource type="Script" uid="uid://ku3qcodfda3t" path="res://Scripts/CameraRotator.cs" id="1_c704i"]
+
+[node name="CameraTurner" type="Node"]
+script = ExtResource("1_c704i")

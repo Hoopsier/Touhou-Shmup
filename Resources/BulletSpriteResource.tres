@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://bm0oey71sqx3n"]
+
+[ext_resource type="Texture2D" uid="uid://jgvyu47dt6e8" path="res://Sprites/Bullet1Sprite.png" id="1_pf2fp"]
+[ext_resource type="Script" uid="uid://cpv0vrlkt8foq" path="res://Scripts/VisualTools/BulletSpriteControl.cs" id="2_p7p4c"]
+[ext_resource type="Texture2D" uid="uid://gjko4fsjork3" path="res://Sprites/Bullet2Sprite.png" id="3_ixf54"]
+
+[resource]
+script = ExtResource("2_p7p4c")
+textures = Array[Object]([ExtResource("3_ixf54")])
+baseTexture = ExtResource("1_pf2fp")

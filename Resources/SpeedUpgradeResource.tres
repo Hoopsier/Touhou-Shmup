@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="BulletSpeedUp" load_steps=2 format=3 uid="uid://c5oq76suokqda"]
+
+[ext_resource type="Script" uid="uid://gmlvwtv1ngoe" path="res://Scripts/BulletUpgrades/BulletSpeedUp.cs" id="1_bbbww"]
+
+[resource]
+script = ExtResource("1_bbbww")
+name = ""
+strength = 0.0

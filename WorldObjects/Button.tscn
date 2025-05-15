@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=4 uid="uid://pjvspkfl3xqg"]
+
+[ext_resource type="Script" uid="uid://cefegnjy0lytp" path="res://Scripts/MenuButtonScripts.cs" id="1_ggvnl"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_ay31j"]
+_data = PackedByteArray("AAADAAUAAAABAAAAwAAAAEAAAABiAAAAUklGRloAAABXRUJQVlA4TE0AAAAvv8APECcgECD8L8hyokZIQPhqsy+iQIDwf2HNiPkPAFDXOUFRJCkOFpIBcHB1CpJ/YaQnFdH/CcD01ZzT2s55voXtBPfnO5d5GLr3BwA=")
+size_override = Vector2(192, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26d5c"]
+atlas = SubResource("PortableCompressedTexture2D_ay31j")
+region = Rect2(0, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqmpt"]
+atlas = SubResource("PortableCompressedTexture2D_ay31j")
+region = Rect2(96, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lh5mi"]
+atlas = SubResource("PortableCompressedTexture2D_ay31j")
+region = Rect2(0, 32, 96, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rsrpa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26d5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqmpt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh5mi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+texture_filter = 1
+scale = Vector2(1.851, 2)
+sprite_frames = SubResource("SpriteFrames_rsrpa")
+speed_scale = 0.0
+centered = false
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"pending_changes": {},
+"slice_section": false
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"should_round_fps": true,
+"slice": "",
+"source": "res://Sprites/MenuButtonSprite.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "2aa5d43a7efd86ec5a446ee1aed07d6a"
+
+[node name="Button" type="Button" parent="." node_paths=PackedStringArray("sprite")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 69.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.573021, 0.418086)
+theme_override_font_sizes/font_size = 26
+text = "Start"
+flat = true
+script = ExtResource("1_ggvnl")
+sprite = NodePath("..")
+
+[connection signal="button_down" from="Button" to="Button" method="Start"]
+[connection signal="mouse_entered" from="Button" to="Button" method="Hovered"]
+[connection signal="mouse_exited" from="Button" to="Button" method="NotHovered"]

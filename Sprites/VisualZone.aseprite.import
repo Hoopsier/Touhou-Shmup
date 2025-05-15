@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bshlcan6y2ppv"
+path="res://.godot/imported/VisualZone.aseprite-6f3bdfa3ac0bb6a9020acceb6e099c6a.res"
+
+[deps]
+
+source_file="res://Sprites/VisualZone.aseprite"
+dest_files=["res://.godot/imported/VisualZone.aseprite-6f3bdfa3ac0bb6a9020acceb6e099c6a.res"]
+
+[params]
+

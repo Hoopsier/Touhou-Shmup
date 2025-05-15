@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://hvs80htx5sj"]
+
+[ext_resource type="Script" uid="uid://xjjfu54qf1x" path="res://Scripts/Gamer/Bullet.cs" id="1_6euqs"]
+[ext_resource type="Texture2D" uid="uid://jgvyu47dt6e8" path="res://Sprites/Bullet1Sprite.png" id="1_65jv6"]
+[ext_resource type="Resource" uid="uid://bm0oey71sqx3n" path="res://Resources/BulletSpriteResource.tres" id="2_jdrtn"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hc5d1"]
+lifetime_randomness = 0.38
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+spread = 75.163
+initial_velocity_min = -38.9
+gravity = Vector3(-20, 20, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ob86f"]
+size = Vector2(10, 12)
+
+[node name="Area2D" type="Area2D" node_paths=PackedStringArray("sprite") groups=["DamageEnemy"]]
+script = ExtResource("1_6euqs")
+sprite = NodePath("Sprite2D")
+spriteControl = ExtResource("2_jdrtn")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(-5, 6)
+rotation = -0.523598
+amount = 16
+speed_scale = 2.0
+process_material = SubResource("ParticleProcessMaterial_hc5d1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_65jv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, -2)
+shape = SubResource("RectangleShape2D_ob86f")
+disabled = true
+
+[connection signal="body_entered" from="." to="." method="hit"]

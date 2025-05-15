@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1mr2364pb5o4"]
+
+[ext_resource type="Script" uid="uid://d4jp1ux5jgpe" path="res://Scripts/Gamer/SpawnScript.cs" id="1_06p64"]
+
+[node name="Marker2D" type="Marker2D"]
+script = ExtResource("1_06p64")

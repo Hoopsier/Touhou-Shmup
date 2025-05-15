@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://d2riok3dc3bsa"
+path="res://.godot/imported/HasteUpSprite.aseprite-9aee5bf12b77b553d076394f4b8c3c57.res"
+
+[deps]
+
+source_file="res://Sprites/HasteUpSprite.aseprite"
+dest_files=["res://.godot/imported/HasteUpSprite.aseprite-9aee5bf12b77b553d076394f4b8c3c57.res"]
+
+[params]
+
