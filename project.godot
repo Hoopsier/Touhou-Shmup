@@ -50,6 +50,7 @@ text_editor/language_server/enable=true
 [file_customization]
 
 folder_colors={
+"res://Plans/": "orange",
 "res://Scenes/": "green",
 "res://Scripts/": "red",
 "res://Sprites/": "purple",
@@ -58,7 +59,6 @@ folder_colors={
 
 [global_group]
 
-DamageEnemy="These damage enemies when collided with them."
 Player="This is the player's hitbox, nothing else."
 CameraCollision="Keep player inbounds"
 Enemy="Killable by player"

@@ -2,12 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://83j1sfr1pekf" path="res://Sprites/PlayerFloatSprite1.png" id="1_gfiaq"]
 [ext_resource type="Script" uid="uid://c7e5vrm1uyj7s" path="res://Scripts/Gamer/Player.cs" id="1_kxajg"]
-[ext_resource type="PackedScene" uid="uid://hvs80htx5sj" path="res://WorldObjects/Bullet.tscn" id="2_36isf"]
+[ext_resource type="PackedScene" uid="uid://bkxxdec00q33u" path="res://WorldObjects/Bullet.tscn" id="2_36isf"]
 [ext_resource type="Texture2D" uid="uid://cenj2h8i22yqc" path="res://Sprites/PlayerFloatSprite2.png" id="2_401ty"]
 [ext_resource type="Texture2D" uid="uid://da47eim7ael7y" path="res://Sprites/PlayerFloatSprite3.png" id="3_lpm6y"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqmx0"]
-size = Vector2(25, 34)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ji8t8"]
 animations = [{
@@ -29,18 +26,19 @@ animations = [{
 "speed": 3.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_43aft"]
+radius = 12.1655
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+slide_on_ceiling = false
 script = ExtResource("1_kxajg")
 bulletSceneInstance = ExtResource("2_36isf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
-position = Vector2(0.5, 2)
-shape = SubResource("RectangleShape2D_tqmx0")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 2)
-scale = Vector2(1, 1.1)
 sprite_frames = SubResource("SpriteFrames_ji8t8")
 animation = &"Float"
 autoplay = "Float"
-frame_progress = 0.295022
+frame_progress = 0.218553
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_43aft")
